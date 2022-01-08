@@ -1,0 +1,44 @@
+on boot
+    chown system system /dev/ttyAMA4
+    chmod 660 /dev/ttyAMA4
+
+    #rcc module
+    write /sys/kernel/rcc/event PASSIVE_MODE
+    write /sys/kernel/rcc/max_anon_clean_size 512M
+    write /sys/kernel/rcc/enable 1
+
+    #disable hmp rt optimization
+    write /sys/kernel/hmp/rt_opt 0
+
+on property:sys.boot_completed=1
+    write /sys/kernel/rcc/event BOOT_COMPLETE
+
+#Modemnum
+on property:ro.boot.product.hardware.sku=ANE-L01
+    setprop ro.odm.config.modem_number 1
+
+on property:ro.boot.product.hardware.sku=ANE-L02
+    setprop ro.odm.config.modem_number 1
+
+on property:ro.boot.product.hardware.sku=ANE-L02J
+    setprop ro.odm.config.modem_number 1
+
+on property:ro.boot.product.hardware.sku=ANE-L02K
+    setprop ro.odm.config.modem_number 1
+
+on property:ro.boot.product.hardware.sku=ANE-L03
+    setprop ro.odm.config.modem_number 1
+
+on property:ro.boot.product.hardware.sku=ANE-L12J
+    setprop ro.odm.config.modem_number 1
+
+on property:ro.boot.product.hardware.sku=ANE-L12JPZ
+    setprop ro.odm.config.modem_number 1
+
+# Service add below.
+
+service CameraDaemon /vendor/bin/CameraDaemon hi6250 ANNE
+    class main
+    user media
+    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm system dsm
+    writepid /dev/cpuset/top-app/tasks /dev/stune/top-app/tasks
