@@ -6,6 +6,15 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+function blob_fixup() {
+    case "${1}" in
+        odm/etc/camera/*.xml)
+	    sed -i 's/gb2312/iso-8859-1/g' "${2}"
+	    sed -i 's/GB2312/iso-8859-1/g' "${2}"
+            ;;
+    esac
+}
+
 # If we're being sourced by the common script that we called,
 # stop right here. No need to go down the rabbit hole.
 if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
