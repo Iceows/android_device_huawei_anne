@@ -13,6 +13,10 @@ $(call inherit-product, device/huawei/hi6250-9-common/hi6250.mk)
 ## Inherit vendor blobs
 $(call inherit-product, vendor/huawei/anne/anne-vendor.mk)
 
+# Audio
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_ODM)/etc/audio/volume/default_volume_tables.xml
+
 # Display
 TARGET_SCREEN_DENSITY := 480
 TARGET_SCREEN_HEIGHT := 2280
