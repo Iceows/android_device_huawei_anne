@@ -11,6 +11,7 @@ function blob_fixup() {
         odm/etc/camera/*.xml)
 	    sed -i 's/gb2312/iso-8859-1/g' "${2}"
 	    sed -i 's/GB2312/iso-8859-1/g' "${2}"
+	    sed -i 's/xmlversion/xml version/g' "${2}"
             ;;
     esac
 }
