@@ -8,7 +8,7 @@
 DEVICE_PATH := device/huawei/anne
 
 ## Inherit common device
-$(call inherit-product, device/huawei/hi6250-9-common/hi6250.mk)
+$(call inherit-product, device/huawei/hi6250-9-common/common.mk)
 
 ## Inherit vendor blobs
 $(call inherit-product, vendor/huawei/anne/anne-vendor.mk)
@@ -35,3 +35,4 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
+
