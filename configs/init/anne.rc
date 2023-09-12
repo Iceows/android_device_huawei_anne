@@ -40,5 +40,5 @@ on property:ro.boot.product.hardware.sku=ANE-L12JPZ
 service CameraDaemon /vendor/bin/CameraDaemon hi6250 ANNE
     class main
     user media
-    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm system dsm
+    group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm system
     writepid /dev/cpuset/top-app/tasks /dev/stune/top-app/tasks
