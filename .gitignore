@@ -1,1 +1,5 @@
 dump/*
+odm-raw.img
+product-raw.img
+system-raw.img
+vendor-raw.img
