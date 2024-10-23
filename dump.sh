@@ -12,14 +12,14 @@ mkdir dump/vendor/
 mkdir dump/product/
 mkdir dump/odm/
 
-sudo mount -o ro system-raw.img dump/system/
-sudo mount -o ro vendor-raw.img dump/vendor/
-sudo mount -o ro product-raw.img dump/product/
-sudo mount -o ro odm-raw.img dump/odm/
+sudo mount -o loop system-raw.img dump/system/
+sudo mount -o loop vendor-raw.img dump/vendor/
+sudo mount -o loop product-raw.img dump/product/
+sudo mount -o loop odm-raw.img dump/odm/
 
 echo "Start extraction"
 sleep 5
-sudo ./extract-files.sh anne ./dump/ > dump.log
+./extract-files.sh anne ./dump/ > dump.log
 
 echo "Reset owner"
 sudo chown -R $(id -u):$(id -g) ./../../../vendor/huawei/hi6250-9-common/*
