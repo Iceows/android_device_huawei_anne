@@ -1,0 +1,12 @@
+
+# Mapcon
+system/app/Mapcon/Mapcon.apk
+
+# IMS App
+system/app/HwIms/HwIms.apk
+
+# HisiRadio
+system/framework/hwIms-common.jar
+system/framework/hwTelephony-common.jar
+system/framework/telephony-common.jar
+
