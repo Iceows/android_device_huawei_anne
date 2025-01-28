@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  Copyright (C) 2024 The LineageOS Project
+  SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Default access point SSID used for tethering -->
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Huawei P20 Lite</string>
+    
+    <!-- Do not translate. Default access point SSID used for local only hotspot -->
+    <string name="wifi_localhotspot_configure_ssid_default" translatable="false">Huawei</string>
+</resources>
