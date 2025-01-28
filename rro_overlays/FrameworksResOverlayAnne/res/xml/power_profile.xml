@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 **
-** Copyright 2009, The Android Open Source Project
+** Copyright 2024, The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License")
 ** you may not use this file except in compliance with the License.
@@ -19,11 +19,11 @@
 <device name="Android">
   <!-- All values are in mA except as noted -->
   <item name="none">0</item>
-  <item name="screen.on">143</item> <!-- min brite -->
+  <item name="screen.on.display0">143</item> <!-- min brite -->
   <item name="bluetooth.active">97</item>
   <item name="bluetooth.on">0.6</item>
   <item name="bluetooth.at">0.6</item> <!-- TBD -->
-  <item name="screen.full">414</item> <!-- backlight 16 leds -->
+  <item name="screen.full.display0">414</item> <!-- backlight 16 leds -->
   <item name="wifi.on">0.6</item>
   <item name="wifi.active">128</item>
   <item name="wifi.scan">146</item>
